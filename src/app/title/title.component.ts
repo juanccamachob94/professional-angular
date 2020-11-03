@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
 
 @Component({
-  selector: 'title',
+  selector: 'app-title',
   templateUrl: `title.component.html`,
   // styles: ['h1 { font-family: Roboto;}']
   styleUrls: ['title.component.scss']
