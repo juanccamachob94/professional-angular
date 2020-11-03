@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { title } from 'process';
 
 @Component({
   selector: 'title',
-  templateUrl: `title.component.html`
+  templateUrl: `title.component.html`,
+  // styles: ['h1 { font-family: Roboto;}']
+  styleUrls: ['title.component.scss']
 })
 export class TitleComponent {
   public name : string = 'Juan';
