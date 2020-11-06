@@ -12,5 +12,13 @@
 <h3>{{ name }}</h3>
 <!-- <button [disabled]="isAvailable" [ngClass]="'active'" type="button">Inscribir</button> -->
 <!-- <button [disabled]="isAvailable" [ngClass]="css_classes" type="button">Inscribir</button> -->
+
+<p *ngIf="!isAvailable; else available">Ejemplo</p>
+
+<ng-template #available>
+  <span class="highlight">Curso disponible</span>
+</ng-template>
+
+
 <button [disabled]="isAvailable" [ngClass]="{active: isAvailable}" type="button">Inscribir</button>
 
