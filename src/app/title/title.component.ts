@@ -11,6 +11,7 @@ export class TitleComponent {
   public name : string = 'Juan';
   public edad : number;
   public edades : number[];
+  public isAvailable :boolean = true;
 
   constructor() {
     // this.name = 'Juan';
@@ -22,6 +23,7 @@ export class TitleComponent {
     this.edad = 20;
 
     setTimeout(() => this.name = 'pruebax', 3000)
+    setTimeout(() => this.isAvailable = false, 3000)
   }
 
   getEdadNombre() : string {
