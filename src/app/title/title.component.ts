@@ -20,6 +20,8 @@ export class TitleComponent {
   ngOnInit() {
     this.name = 'Juan';
     this.edad = 20;
+
+    setTimeout(() => this.name = 'pruebax', 3000)
   }
 
   getEdadNombre() : string {
