@@ -16,3 +16,19 @@
   background-color: black;
   color: white;
 }
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  font-size: 1em;
+}
+
+.active {
+  background-color: rgb(50, 50, 200);
+  color: white;
+}
+
+button:not(.active) {
+  opacity: 0.56;
+}
