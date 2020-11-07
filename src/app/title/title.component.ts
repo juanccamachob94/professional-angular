@@ -11,8 +11,11 @@ export class TitleComponent {
   public name : string = 'Juan';
   public edad : number;
   public edades : number[];
-  public isAvailable :boolean = true;
-  public css_classes :string[] = ['active', 'shadow'];
+  // public isAvailable :boolean = true;
+  // public css_classes :string[] = ['active', 'shadow'];
+
+  public moreInformation : boolean = false;
+  public topics :string[];
 
   constructor() {
     // this.name = 'Juan';
@@ -22,10 +25,19 @@ export class TitleComponent {
   ngOnInit() {
     this.name = 'Juan';
     this.edad = 20;
+    this.topics = [
+      'Fundamentos',
+      'Componentes',
+      'Directivas',
+      'Animaciones',
+      'Servicios',
+      'RxJS',
+      'Binding'
+    ];
 
-    setTimeout(() => this.name = 'pruebax', 3000);
-    setTimeout(() => this.isAvailable = false, 3000);
-    setTimeout(() => this.css_classes = ['shadow'], 3000);
+    // setTimeout(() => this.name = 'pruebax', 3000);
+    // setTimeout(() => this.isAvailable = false, 3000);
+    // setTimeout(() => this.css_classes = ['shadow'], 3000);
   }
 
   getEdadNombre() : string {

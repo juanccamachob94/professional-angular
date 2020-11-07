@@ -9,16 +9,35 @@
 </div> -->
 
 <h1>Curso</h1>
-<h3>{{ name }}</h3>
-<!-- <button [disabled]="isAvailable" [ngClass]="'active'" type="button">Inscribir</button> -->
-<!-- <button [disabled]="isAvailable" [ngClass]="css_classes" type="button">Inscribir</button> -->
 
-<p *ngIf="!isAvailable; else available">Ejemplo</p>
+<p *ngIf="false; else available">Ejemplo</p>
+
+<!-- <p *ngIf="!isAvailable; else available">Ejemplo</p> -->
 
 <ng-template #available>
   <span class="highlight">Curso disponible</span>
 </ng-template>
 
 
-<button [disabled]="isAvailable" [ngClass]="{active: isAvailable}" type="button">Inscribir</button>
+<h3>{{ name }}</h3>
+<!-- <button [disabled]="isAvailable" [ngClass]="'active'" type="button">Inscribir</button> -->
+<!-- <button [disabled]="isAvailable" [ngClass]="css_classes" type="button">Inscribir</button> -->
+
+<div>
+  <p>Más información <i class="fa" [ngClass]="{ 'fa-chevron-circle-down': !moreInformation, 'fa-chevron-circle-up': moreInformation }"></i></p>
+  <p *ngIf="moreInformation">
+    Este es un curso de Angular. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad accusantium quod cupiditate rem sit officia amet, reiciendis iste vero deleniti quis dolores adipisci dolorum quam sunt deserunt nihil consequatur placeat!
+  </p>
+</div>
+
+<ul>
+  <li *ngFor="let topic of topics; index as posicion">{{posicion}} {{topic}}</li>
+</ul>
+
+
+
+ 
+<!-- <button [disabled]="isAvailable" [ngClass]="{active: isAvailable}" type="button">Inscribir</button> -->
+
+<button [disabled]="true" [ngClass]="{active: true}" type="button">Inscribir</button>
 
