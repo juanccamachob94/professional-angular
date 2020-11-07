@@ -18,6 +18,13 @@
   <span class="highlight">Curso disponible</span>
 </ng-template>
 
+<div class="category" [ngSwitch]="category">
+  <span *ngSwitchCase="'web'">Web</span>
+  <span *ngSwitchCase="'other'">Other</span>
+  <span *ngSwitchCase="'mobile'">Mobile</span>
+  <span *ngSwitchDefault>No especificado</span>
+</div>
+
 
 <h3>{{ name }}</h3>
 <!-- <button [disabled]="isAvailable" [ngClass]="'active'" type="button">Inscribir</button> -->

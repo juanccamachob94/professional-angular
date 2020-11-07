@@ -15,6 +15,7 @@ export class TitleComponent {
   // public css_classes :string[] = ['active', 'shadow'];
 
   public moreInformation : boolean = false;
+  public category :string; // mobile web other
   public topics :string[];
 
   constructor() {
@@ -25,6 +26,7 @@ export class TitleComponent {
   ngOnInit() {
     this.name = 'Juan';
     this.edad = 20;
+    this.category = 'web';
     this.topics = [
       'Fundamentos',
       'Componentes',
